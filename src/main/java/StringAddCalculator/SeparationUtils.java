@@ -5,14 +5,15 @@ import java.util.regex.Pattern;
 
 public class SeparationUtils  {
 
+    public static final String defaultSeparation = "[,:]";
+    public static final String customSeparation = "//(.)\n(.*)";
+
     public String[] separate(String s) {
-        return s.split("[,:]");
+        return  s.split(defaultSeparation);
     }
 
     public String[] customSeparate(String s) {
-
-        Matcher m = Pattern.compile("//(.)\n(.*)").matcher(s);
-
+        Matcher m = Pattern.compile(customSeparation).matcher(s);
         if (m.find()) {
             String customDelimiter = m.group(1);
             String[] tokens= m.group(2).split(customDelimiter);

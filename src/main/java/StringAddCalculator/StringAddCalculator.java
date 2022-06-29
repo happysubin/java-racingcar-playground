@@ -12,17 +12,16 @@ public class StringAddCalculator {
         if(stringIsNull(s) || s.isEmpty()) return 0;
 
         else if(s.startsWith("//")) {
-            String[] arr = separationUtils.customSeparate(s);
-            return makeSum(arr);
+            String[] str = separationUtils.customSeparate(s);
+            return makeSum(str);
         }
-
-        String[] arr = separationUtils.separate(s);
-        return makeSum(arr);
+        String[] str = separationUtils.separate(s);
+        return makeSum(str);
     }
 
-    private int makeSum(String[] arr) {
+    private int makeSum(String[] strings) {
         int sum = 0;
-        for (String s : arr) {
+        for (String s : strings) {
             int num = Integer.parseInt(s);
             ValidationUtils.validate(num);
             sum += num;
