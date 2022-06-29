@@ -23,7 +23,9 @@ public class StringAddCalculator {
     private int makeSum(String[] arr) {
         int sum = 0;
         for (String s : arr) {
-            sum += Integer.parseInt(s);
+            int num = Integer.parseInt(s);
+            ValidationUtils.validate(num);
+            sum += num;
         }
         return sum;
     }

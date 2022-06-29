@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class StringAddCalculatorTest {
 
@@ -54,6 +55,11 @@ class StringAddCalculatorTest {
         assertThat(num1).isEqualTo(6);
     }
 
-
-
+    @Test
+    @DisplayName("음수를 전달할 경우 RuntimeException 예외가 발생해야 한다.")
+    void throwRunTimeExceptionWhenNumberIsMinus(){
+        assertThatThrownBy(()->{
+            calculator.calculate("-1,-1,3,4");
+        }).isInstanceOf(RuntimeException.class);
+    }
 }
