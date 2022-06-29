@@ -10,8 +10,13 @@ public class StringAddCalculator {
 
     public int calculate(String s) {
         if(stringIsNull(s) || s.isEmpty()) return 0;
-        String[] arr = separationUtils.separate(s);
 
+        else if(s.startsWith("//")) {
+            String[] arr = separationUtils.customSeparate(s);
+            return makeSum(arr);
+        }
+
+        String[] arr = separationUtils.separate(s);
         return makeSum(arr);
     }
 
