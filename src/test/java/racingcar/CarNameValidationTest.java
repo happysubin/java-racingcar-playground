@@ -11,9 +11,9 @@ public class CarNameValidationTest {
     void carNameValidationTestV1(){
         String[] names = {"subin", "eun", "bi"};
         String[] names2 = {"subinb", "eun", "bi"};
-        boolean result = CarNameValidation.validateNameLength(names);
-        boolean result2 = CarNameValidation.validateNameLength(names2);
-        assertThat(result).isTrue();
-        assertThat(result2).isFalse();
+        boolean result = CarNameValidation.NameLengthIsMoreThan5(names);
+        boolean result2 = CarNameValidation.NameLengthIsMoreThan5(names2);
+        assertThat(result).isFalse();
+        assertThat(result2).isTrue();
     }
 }

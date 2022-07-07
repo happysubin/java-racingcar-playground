@@ -1,10 +1,10 @@
 package racingcar;
 
 public class CarNameValidation {
-    public static boolean validateNameLength(String[] names) {
+    public static boolean NameLengthIsMoreThan5(String[] names) {
         for (String name : names) {
-            if(name.length() > 5) return false;
+            if(name.length() > 5) return true;
         }
-        return true;
+        return false;
     }
 }
