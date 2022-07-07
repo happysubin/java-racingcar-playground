@@ -26,6 +26,13 @@ public class Cars {
             int random = RandomUtils.generateRandomNumber();
             cars.get(i).move(random);
         }
+        printCars();
+    }
+
+    public void printCars(){
+        for (int i = 0; i < cars.size(); i++) {
+            System.out.println(cars.get(i).toString());
+        }
     }
 
     public List<Car> getCars() {
