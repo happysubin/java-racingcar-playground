@@ -21,6 +21,13 @@ public class Cars {
         return cars;
     }
 
+    public void playRacing(){
+        for (int i = 0; i < cars.size(); i++) {
+            int random = RandomUtils.generateRandomNumber();
+            cars.get(i).move(random);
+        }
+    }
+
     public List<Car> getCars() {
         return cars;
     }

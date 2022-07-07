@@ -13,7 +13,7 @@ public class CarTest {
     void CarTestV1(){
         String name= "subin";
         Car car = new Car(name);
-        assertThat(car.getLocation()).isEqualTo(0);
+        assertThat(car.getLocation()).isEqualTo("");
         assertThat(car.getName()).isEqualTo("subin");
     }
 
@@ -23,7 +23,7 @@ public class CarTest {
         String name= "subin";
         Car car = new Car(name);
         car.move(3);
-        assertThat(car.getLocation()).isEqualTo(0);
+        assertThat(car.getLocation()).isEqualTo("");
         assertThat(car.getName()).isEqualTo("subin");
     }
 
@@ -33,7 +33,7 @@ public class CarTest {
         String name= "subin";
         Car car = new Car(name);
         car.move(4);
-        assertThat(car.getLocation()).isEqualTo(4);
+        assertThat(car.getLocation()).isEqualTo("-");
         assertThat(car.getName()).isEqualTo("subin");
     }
 }

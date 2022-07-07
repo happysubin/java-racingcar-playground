@@ -3,22 +3,27 @@ package racingcar;
 public class Car {
 
     private final String name;
-    private int location;
+    private String location;
 
     public Car(String name) {
         this.name = name;
-        this.location = 0;
+        this.location = "";
     }
 
     public String getName() {
         return name;
     }
 
-    public int getLocation() {
+    public String getLocation() {
         return location;
     }
 
     public void move(int num) {
-        if(num >= 4) location += num;
+        if(num >= 4) location += "-";
+    }
+
+    @Override
+    public String toString() {
+        return name + " : " + location;
     }
 }
