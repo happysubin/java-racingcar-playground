@@ -11,7 +11,8 @@ public class RacingCarGameTest {
     @Test
     @DisplayName("게임 생성")
     void createGame(){
-        RacingCarGame game = new RacingCarGame(5);
+        String names = "subin,debin,eunbi";
+        RacingCarGame game = new RacingCarGame(5, names);
 
         assertThat(game.getRound()).isEqualTo(5);
     }

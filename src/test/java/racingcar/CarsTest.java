@@ -12,7 +12,7 @@ public class CarsTest {
     @DisplayName("Cars 인스턴스를 생성")
     void CarsTestV1(){
         //given
-        String[] names = {"subin", "eun", "bi", "seoul"};
+        String names = "subin,eun,bi,seoul";
 
         //when
         Cars cars = new Cars(names);

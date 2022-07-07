@@ -7,14 +7,16 @@ public class Cars {
 
     List<Car> cars;
 
-    public Cars(String[] names) {
+    public Cars(String names) {
         cars = makeCarList(names);
     }
 
-    private List<Car> makeCarList(String[] names) {
+    private List<Car> makeCarList(String names) {
         List<Car> cars= new ArrayList<>();
-        for (int i = 0; i < names.length; i++) {
-            cars.add(new Car(names[i]));
+        CarNameInputUi carNameInputUi = new CarNameInputUi();
+        String[] list = carNameInputUi.inputName(names);
+        for (int i = 0; i < list.length; i++) {
+            cars.add(new Car(list[i]));
         }
         return cars;
     }
