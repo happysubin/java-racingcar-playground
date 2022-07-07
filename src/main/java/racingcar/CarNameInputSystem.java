@@ -1,6 +1,6 @@
 package racingcar;
 
-public class CarNameInputUi {
+public class CarNameInputSystem {
 
 
     public String[] inputName(String names) {

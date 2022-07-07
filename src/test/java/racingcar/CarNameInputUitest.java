@@ -10,7 +10,7 @@ public class CarNameInputUitest {
     @Test
     @DisplayName("자동차 이름이 1개만 들어올 때")
     void carNameTestV1(){
-        CarNameInputUi carInputUi = new CarNameInputUi();
+        CarNameInputSystem carInputUi = new CarNameInputSystem();
         String[] names = carInputUi.inputName("subin,");
         assertThat(names[0]).isEqualTo("subin");
     }
@@ -18,7 +18,7 @@ public class CarNameInputUitest {
     @Test
     @DisplayName("자동차 이름이 여러개가 들어올 때")
     void carNameTestV2(){
-        CarNameInputUi carInputUi = new CarNameInputUi();
+        CarNameInputSystem carInputUi = new CarNameInputSystem();
         String[] names = carInputUi.inputName("subin,eun,bi");
         assertThat(names[0]).isEqualTo("subin");
         assertThat(names[1]).isEqualTo("eun");
@@ -29,7 +29,7 @@ public class CarNameInputUitest {
     @DisplayName("자동차 이름이 안 들어올 때")
     void carNameTestV3(){
         assertThatThrownBy(()->{
-            CarNameInputUi carInputUi = new CarNameInputUi();
+            CarNameInputSystem carInputUi = new CarNameInputSystem();
             String[] names = carInputUi.inputName("");
             String[] names2 = carInputUi.inputName(null);
         }).isInstanceOf(IllegalStateException.class);

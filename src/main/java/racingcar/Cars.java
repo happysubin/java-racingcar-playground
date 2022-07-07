@@ -13,7 +13,7 @@ public class Cars {
 
     private List<Car> makeCarList(String names) {
         List<Car> cars= new ArrayList<>();
-        CarNameInputUi carNameInputUi = new CarNameInputUi();
+        CarNameInputSystem carNameInputUi = new CarNameInputSystem();
         String[] list = carNameInputUi.inputName(names);
         for (int i = 0; i < list.length; i++) {
             cars.add(new Car(list[i]));

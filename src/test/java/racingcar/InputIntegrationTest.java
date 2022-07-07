@@ -12,7 +12,7 @@ public class InputIntegrationTest {
     @Test
     @DisplayName("성공하는 Input Test")
     void integrationTestV1(){
-        CarNameInputUi carInputUi = new CarNameInputUi();
+        CarNameInputSystem carInputUi = new CarNameInputSystem();
         String[] names = carInputUi.inputName("subin,eun,bi");
 
         assertThat(names[0]).isEqualTo("subin");
@@ -24,7 +24,7 @@ public class InputIntegrationTest {
     @DisplayName("실패하는 Input Test")
     void integrationTestV2(){
         assertThatThrownBy(() -> {
-            CarNameInputUi carInputUi = new CarNameInputUi();
+            CarNameInputSystem carInputUi = new CarNameInputSystem();
             String[] names = carInputUi.inputName("subean,eun,bi");
         }).isInstanceOf(IllegalStateException.class);
 
