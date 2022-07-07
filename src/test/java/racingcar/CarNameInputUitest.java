@@ -15,5 +15,23 @@ public class CarNameInputUitest {
         assertThat(names[0]).isEqualTo("subin");
     }
 
-    //TODO 여러 이름 넣기, 예외 생각하기
+    @Test
+    @DisplayName("자동차 이름이 여러개가 들어올 때")
+    void carNameTestV2(){
+        CarNameInputUi carInputUi = new CarNameInputUi();
+        String[] names = carInputUi.inputName("subin,eun,bi");
+        assertThat(names[0]).isEqualTo("subin");
+        assertThat(names[1]).isEqualTo("eun");
+        assertThat(names[2]).isEqualTo("bi");
+    }
+
+    @Test
+    @DisplayName("자동차 이름이 안 들어올 때")
+    void carNameTestV3(){
+        assertThatThrownBy(()->{
+            CarNameInputUi carInputUi = new CarNameInputUi();
+            String[] names = carInputUi.inputName("");
+            String[] names2 = carInputUi.inputName(null);
+        }).isInstanceOf(IllegalStateException.class);
+    }
 }
