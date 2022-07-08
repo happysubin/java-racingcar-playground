@@ -9,11 +9,12 @@ public class RacingCarGame {
         this.cars = new Cars(names);
     }
 
-    public void playGame(){
+    public Cars playGame(){
         cars.printCars();
         for (int i = 0; i < round; i++) {
             cars.playRacing();
         }
+        return cars;
     }
 
     public int getRound() {

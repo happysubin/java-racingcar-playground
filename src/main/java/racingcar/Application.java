@@ -11,6 +11,11 @@ public class Application {
         String round = sc.next();
 
         RacingCarGame racingCarGame = new RacingCarGame(round, names);
-        racingCarGame.playGame();
+        Cars cars = racingCarGame.playGame();
+
+        ChooseWinnerSystem winnerSystem = new ChooseWinnerSystem(cars);
+        String winners = winnerSystem.chooseWinner();
+        System.out.println(winners + " 가 최종우승했습니다.");
+
     }
 }
