@@ -10,6 +10,7 @@ public class RacingCarGame {
     }
 
     public void playGame(){
+        cars.printCars();
         for (int i = 0; i < round; i++) {
             cars.playRacing();
         }

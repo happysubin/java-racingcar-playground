@@ -33,6 +33,7 @@ public class Cars {
         for (int i = 0; i < cars.size(); i++) {
             System.out.println(cars.get(i).toString());
         }
+        System.out.println();
     }
 
     public List<Car> getCars() {
