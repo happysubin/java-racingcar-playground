@@ -1,10 +1,10 @@
 package refactoring;
 
-public class Position {
+public class Location {
 
     private int position;
 
-    public Position() {
+    public Location() {
         this.position = 0;
     }
 
