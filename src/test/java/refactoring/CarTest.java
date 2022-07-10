@@ -29,7 +29,7 @@ public class CarTest {
         Location location = car.move(5);
 
         //then
-        assertThat(location.getPosition()).isEqualTo(1);
+        assertThat(location.getLocation()).isEqualTo(1);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class CarTest {
         Location location = car.move(4);
 
         //then
-        assertThat(location.getPosition()).isEqualTo(0);
+        assertThat(location.getLocation()).isEqualTo(0);
 
     }
 }

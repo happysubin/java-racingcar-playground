@@ -2,18 +2,18 @@ package refactoring;
 
 public class Location {
 
-    private int position;
+    private int location;
 
     public Location() {
-        this.position = 0;
+        this.location = 0;
     }
 
     public int add(){
-        position++;
-        return position;
+        location++;
+        return location;
     }
 
-    public int getPosition() {
-        return position;
+    public int getLocation() {
+        return location;
     }
 }
