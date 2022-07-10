@@ -5,10 +5,12 @@ import java.util.List;
 
 public class Cars {
 
-    List<Car> cars;
+    private List<Car> cars;
+    private PrintUi printUi;
 
     public Cars(String[] names) {
         this.cars = makeCars(names);
+        this.printUi = new PrintUi();
     }
 
     private List<Car> makeCars(String[] names) {
@@ -19,6 +21,23 @@ public class Cars {
         return result;
     }
 
+    public Cars racing() {
+        System.out.println();
+
+        for (Car car : cars) {
+            int randomNumber = RandomUtils.generateRandomNumber();
+            car.move(randomNumber);
+        }
+        printCar();
+
+        return this;
+    }
+
+    public void printCar(){
+        for (Car car : cars) {
+            printUi.printCar(car);
+        }
+    }
 
     public List<Car> getCars() {
         return cars;
