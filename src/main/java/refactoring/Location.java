@@ -12,4 +12,8 @@ public class Location {
         position++;
         return position;
     }
+
+    public int getPosition() {
+        return position;
+    }
 }
