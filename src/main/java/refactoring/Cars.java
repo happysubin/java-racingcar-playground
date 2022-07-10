@@ -25,7 +25,7 @@ public class Cars {
         System.out.println();
 
         for (Car car : cars) {
-            int randomNumber = RandomUtils.generateRandomNumber();
+            int randomNumber = getRandomNumber();
             car.move(randomNumber);
         }
         printCar();
@@ -37,6 +37,10 @@ public class Cars {
         for (Car car : cars) {
             printUi.printCar(car);
         }
+    }
+
+    public int getRandomNumber(){
+        return RandomUtils.generateRandomNumber();
     }
 
     public List<Car> getCars() {
