@@ -4,6 +4,7 @@ package refactoring;
 import java.util.Scanner;
 
 public class InputUi {
+
     public boolean validate(String name) {
         if(name == null || name.isEmpty()){
             throw new IllegalStateException("자동차 이름을 넣어주세요.");
@@ -16,5 +17,20 @@ public class InputUi {
 
     public String[] split(String s) {
         return s.split(",");
+    }
+
+    public void validateNames(String[] names){
+        for (String name : names) {
+            validate(name);
+        }
+    }
+
+    public String[] getNames(){
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        String[] names = split(str);
+        validateNames(names);
+        return names;
     }
 }
