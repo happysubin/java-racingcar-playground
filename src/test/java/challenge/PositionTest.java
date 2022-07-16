@@ -11,4 +11,26 @@ public class PositionTest {
 
         Assertions.assertThat(position.getPosition()).isEqualTo(0);
     }
+
+    @Test
+    void moveSuccessPosition() {
+        //given
+        Position position = new Position();
+
+        //when
+        position.move(5);
+
+        Assertions.assertThat(position.getPosition()).isEqualTo(1);
+    }
+
+    @Test
+    void moveFailPosition() {
+        //given
+        Position position = new Position();
+
+        //when
+        position.move(3);
+
+        Assertions.assertThat(position.getPosition()).isEqualTo(0);
+    }
 }

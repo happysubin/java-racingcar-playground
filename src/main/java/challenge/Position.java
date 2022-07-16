@@ -11,4 +11,11 @@ public class Position {
     public int getPosition() {
         return position;
     }
+
+    public int move(int num) {
+        if(num >= 4 ){
+            position++;
+        }
+        return position;
+    }
 }

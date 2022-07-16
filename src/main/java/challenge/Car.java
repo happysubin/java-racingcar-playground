@@ -17,4 +17,9 @@ public class Car {
     public Position getPosition() {
         return position;
     }
+
+    public int move(int num) {
+        int moveDistance = position.move(num);
+        return moveDistance;
+    }
 }
