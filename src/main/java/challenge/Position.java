@@ -2,6 +2,8 @@ package challenge;
 
 public class Position {
 
+    public static final int STANDARD = 4;
+
     private int position;
 
     public Position() {
@@ -13,7 +15,7 @@ public class Position {
     }
 
     public int move(int num) {
-        if(num >= 4 ){
+        if(num >= STANDARD ){
             position++;
         }
         return position;

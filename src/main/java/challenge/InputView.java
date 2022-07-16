@@ -1,14 +1,15 @@
 package challenge;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class InputView {
 
     private  Scanner scanner = new Scanner(System.in);
+
+    private static final String VALIDATION_FAIL_MESSAGE = "자동차 이름은 5글자 미만입니다.";
+    private static final String SPLIT_STANDARD = ",";
 
     public  List<String> getNames() {
         String nameString = getString();
@@ -26,14 +27,14 @@ public class InputView {
     public  void validate(List<String> names) {
         for (String name : names) {
             if(name.length() > 5){
-                throw new IllegalStateException("자동차 이름은 5글자 미만입니다");
+                throw new IllegalStateException(VALIDATION_FAIL_MESSAGE);
             }
         }
     }
 
     public  List<String> split(String nameString){
         List<String> names = new ArrayList<>();
-        String[] split = nameString.split(",");
+        String[] split = nameString.split(SPLIT_STANDARD);
         for (String s : split) {
             names.add(s);
         }
