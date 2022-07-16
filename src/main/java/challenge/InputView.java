@@ -23,7 +23,6 @@ public class InputView {
         return scanner.next();
     }
 
-
     public  void validate(List<String> names) {
         for (String name : names) {
             if(name.length() > 5){
@@ -40,6 +39,4 @@ public class InputView {
         }
         return names;
     }
-
-
 }
