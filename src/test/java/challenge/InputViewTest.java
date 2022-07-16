@@ -71,4 +71,38 @@ public class InputViewTest {
             //then
         }).isInstanceOf(IllegalStateException.class);
     }
+
+    @Test
+    void inputNumberOfGameSuccessTest() {
+        //given
+        InputView inputView = new InputView(){
+            @Override
+            public String getString() {
+                return "3";
+            }
+        };
+
+        //when
+        inputView.getNumberOfGame();
+
+        //then
+        assertThat(inputView.getNumberOfGame()).isEqualTo(3);
+    }
+
+    @Test
+    void inputNumberOfGameFailTest() {
+        //given
+        InputView inputView = new InputView(){
+            @Override
+            public String getString() {
+                return "w";
+            }
+        };
+
+        //when
+        assertThatThrownBy(() -> {
+            inputView.getNumberOfGame();
+
+        }).isInstanceOf(IllegalStateException.class);
+    }
 }
