@@ -20,7 +20,7 @@ public class CarRacingGameTest {
         names.add("ho");
 
         //when
-        CarRacingGame game = new CarRacingGame(names);
+        CarRacingGame game = new CarRacingGame(names,2 );
 
         //then
         assertThat(game.getCars().getCars().size()).isEqualTo(3);
@@ -33,7 +33,7 @@ public class CarRacingGameTest {
         names.add("ah");
         names.add("sb");
         names.add("ho");
-        CarRacingGame game = new CarRacingGame(names);
+        CarRacingGame game = new CarRacingGame(names, 1);
 
         //when
         List<Integer> randomList = game.getRandomList();
@@ -41,5 +41,24 @@ public class CarRacingGameTest {
         assertThat(randomList.size()).isEqualTo(3);
     }
 
+    @Test
+    void playGame() {
+        //given
+        List<String> names = new ArrayList<>();
+        names.add("ah");
+        names.add("sb");
+        names.add("ho");
+        CarRacingGame game = new CarRacingGame(names, 1){
+            @Override
+            public List<Integer> getRandomList() {
+                return Arrays.asList(4, 5, 6, 7);
+            }
+        };
 
+        //when
+        game.play();
+
+        //then
+        assertThat(game.getCars().getCars().size()).isEqualTo(3);
+    }
 }

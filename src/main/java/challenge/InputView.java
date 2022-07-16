@@ -39,4 +39,8 @@ public class InputView {
         }
         return names;
     }
+
+    public int getNumberOfGame() {
+        return scanner.nextInt();
+    }
 }
