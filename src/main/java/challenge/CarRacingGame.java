@@ -17,8 +17,12 @@ public class CarRacingGame {
         return cars;
     }
 
-    public void play() {
-
+    public CarRacingGame play() {
+        for (int i = 0; i < numberOfGames; i++) {
+            List<Integer> randomList = getRandomList();
+            cars.moveCars(randomList);
+        }
+        return this;
     }
 
     public List<Integer> getRandomList(){

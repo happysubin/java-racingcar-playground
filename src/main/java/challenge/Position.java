@@ -7,7 +7,7 @@ public class Position {
     private int position;
 
     public Position() {
-        this.position = 0;
+        this.position = 1;
     }
 
     public int getPosition() {

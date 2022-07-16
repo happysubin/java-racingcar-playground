@@ -9,7 +9,7 @@ public class PositionTest {
     void createPosition() {
         Position position = new Position();
 
-        Assertions.assertThat(position.getPosition()).isEqualTo(0);
+        Assertions.assertThat(position.getPosition()).isEqualTo(1);
     }
 
     @Test
@@ -20,7 +20,7 @@ public class PositionTest {
         //when
         position.move(5);
 
-        Assertions.assertThat(position.getPosition()).isEqualTo(1);
+        Assertions.assertThat(position.getPosition()).isEqualTo(2);
     }
 
     @Test
@@ -31,6 +31,6 @@ public class PositionTest {
         //when
         position.move(3);
 
-        Assertions.assertThat(position.getPosition()).isEqualTo(0);
+        Assertions.assertThat(position.getPosition()).isEqualTo(1);
     }
 }

@@ -48,10 +48,10 @@ public class CarRacingGameTest {
         names.add("ah");
         names.add("sb");
         names.add("ho");
-        CarRacingGame game = new CarRacingGame(names, 1){
+        CarRacingGame game = new CarRacingGame(names, 3){
             @Override
             public List<Integer> getRandomList() {
-                return Arrays.asList(4, 5, 6, 7);
+                return Arrays.asList(4, 5, 3);
             }
         };
 
@@ -59,6 +59,7 @@ public class CarRacingGameTest {
         game.play();
 
         //then
-        assertThat(game.getCars().getCars().size()).isEqualTo(3);
+        assertThat(game.getCars().getCars().get(0).getPosition().getPosition()).isEqualTo(4);
+        assertThat(game.getCars().getCars().get(2).getPosition().getPosition()).isEqualTo(1);
     }
 }

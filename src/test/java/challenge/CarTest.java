@@ -15,7 +15,7 @@ public class CarTest {
 
         //then
         assertThat(car.getName().getName()).isEqualTo("subin");
-        assertThat(car.getPosition().getPosition()).isEqualTo(0);
+        assertThat(car.getPosition().getPosition()).isEqualTo(1);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class CarTest {
         int moveDistance2 = car.move(3);
 
         //then
-        assertThat(moveDistance).isEqualTo(1);
-        assertThat(moveDistance2).isEqualTo(1);
+        assertThat(moveDistance).isEqualTo(2);
+        assertThat(moveDistance2).isEqualTo(2);
     }
 }

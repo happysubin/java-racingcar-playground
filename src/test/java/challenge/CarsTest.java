@@ -40,7 +40,7 @@ public class CarsTest {
         cars.moveCars(randomNumbers);
 
         //then
-        assertThat(cars.getCars().get(0).getPosition().getPosition()).isEqualTo(1);
-        assertThat(cars.getCars().get(1).getPosition().getPosition()).isEqualTo(0);
+        assertThat(cars.getCars().get(0).getPosition().getPosition()).isEqualTo(2);
+        assertThat(cars.getCars().get(1).getPosition().getPosition()).isEqualTo(1);
     }
 }
