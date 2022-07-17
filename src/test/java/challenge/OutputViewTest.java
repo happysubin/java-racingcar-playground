@@ -16,4 +16,14 @@ public class OutputViewTest {
         //then
         assertThat(view).isEqualTo("-----");
     }
+
+    @Test
+    public void printCar() {
+        //given
+        Car car = new Car("sb");
+        car.move(9);
+
+        //when
+        OutputView.printCar(car);
+    }
 }

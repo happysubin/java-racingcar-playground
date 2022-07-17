@@ -1,8 +1,8 @@
 package challenge;
 
 public class OutputView {
-    public static void viewCar(Car car) {
-
+    public static void printCar(Car car) {
+        System.out.println(car.getName().getName() + " : " + getLocationView(car.getPosition().getPosition()));
     }
 
     public static String getLocationView(int position) {
