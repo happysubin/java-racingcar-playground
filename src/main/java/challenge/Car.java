@@ -22,4 +22,5 @@ public class Car {
         int moveDistance = position.move(num);
         return moveDistance;
     }
+
 }
