@@ -43,4 +43,15 @@ public class CarsTest {
         assertThat(cars.getCars().get(0).getPosition().getPosition()).isEqualTo(2);
         assertThat(cars.getCars().get(1).getPosition().getPosition()).isEqualTo(1);
     }
+
+    @Test
+    void compareCarsTest() {
+        //given
+        Cars cars = new Cars(Arrays.asList("12", "32", "32"));
+        cars.getCars().get(1).move(9);
+
+        //when
+        Car car = cars.compareCars();
+        assertThat(car).isEqualTo(cars.getCars().get(1));
+    }
 }

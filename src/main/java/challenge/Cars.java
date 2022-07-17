@@ -37,4 +37,13 @@ public class Cars {
         }
         System.out.println();
     }
+
+
+    public Car compareCars() {
+        Car car = cars.get(0);
+        for (int i = 1; i < cars.size(); i++) {
+            car = car.compareCar(cars.get(i));
+        }
+        return car;
+    }
 }
