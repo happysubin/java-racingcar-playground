@@ -3,13 +3,15 @@ package challenge;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.*;
+
 public class PositionTest {
 
     @Test
     void createPosition() {
         Position position = new Position();
 
-        Assertions.assertThat(position.getPosition()).isEqualTo(1);
+        assertThat(position.getPosition()).isEqualTo(1);
     }
 
     @Test
@@ -20,7 +22,7 @@ public class PositionTest {
         //when
         position.move(5);
 
-        Assertions.assertThat(position.getPosition()).isEqualTo(2);
+        assertThat(position.getPosition()).isEqualTo(2);
     }
 
     @Test
@@ -31,6 +33,20 @@ public class PositionTest {
         //when
         position.move(3);
 
-        Assertions.assertThat(position.getPosition()).isEqualTo(1);
+        assertThat(position.getPosition()).isEqualTo(1);
+    }
+
+    @Test
+    void comparePositionTest(){
+        //given
+        Position position1 = new Position();
+        position1.move(9);
+        Position position2 = new Position();
+
+        //when
+        Position position = position1.comparePosition(position1);
+
+        //then
+        assertThat(position).isSameAs(position1);
     }
 }

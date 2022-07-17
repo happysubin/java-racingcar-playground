@@ -20,4 +20,16 @@ public class Position {
         }
         return position;
     }
+
+    public Position comparePosition(Position comparativePosition){
+        if(comparativePosition.isMoreThan(position)){
+            return comparativePosition;
+        }
+        return this;
+    }
+
+    private boolean isMoreThan(int comparativePosition) {
+        return position > comparativePosition;
+    }
+
 }
