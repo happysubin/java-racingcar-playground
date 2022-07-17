@@ -25,8 +25,15 @@ public class Cars {
 
     //매번 랜덤 생성한 리스트를 가져온다.
     public void moveCars(List<Integer> randomNumbers) {
+        printCars();
         for (int i = 0; i < randomNumbers.size(); i++) {
             cars.get(i).move(randomNumbers.get(i));
+        }
+    }
+
+    public void printCars(){
+        for (Car car : cars) {
+            OutputView.printCar(car);
         }
     }
 }

@@ -17,12 +17,12 @@ public class CarRacingGame {
         return cars;
     }
 
-    public CarRacingGame play() {
+    public Cars play() {
         for (int i = 0; i < numberOfGames; i++) {
             List<Integer> randomList = getRandomList();
             cars.moveCars(randomList);
         }
-        return this;
+        return cars;
     }
 
     public List<Integer> getRandomList(){
