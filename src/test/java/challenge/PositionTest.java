@@ -44,7 +44,7 @@ public class PositionTest {
         Position position2 = new Position();
 
         //when
-        Position position = position1.comparePosition(position1);
+        Position position = position1.comparePosition(position2);
 
         //then
         assertThat(position).isSameAs(position1);
