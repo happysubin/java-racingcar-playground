@@ -52,6 +52,8 @@ public class CarsTest {
 
         //when
         Car car = cars.compareCars();
+
+        //then
         assertThat(car).isEqualTo(cars.getCars().get(1));
     }
 }
