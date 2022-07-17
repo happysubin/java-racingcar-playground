@@ -5,5 +5,6 @@ public class Application {
         InputView inputView = new InputView();
         CarRacingGame game = new CarRacingGame(inputView.getNames(), inputView.getNumberOfGame());
         Cars gameResultCars = game.play();
+        Winner.getFirst(gameResultCars);
     }
 }

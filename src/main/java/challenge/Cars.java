@@ -35,5 +35,6 @@ public class Cars {
         for (Car car : cars) {
             OutputView.printCar(car);
         }
+        System.out.println();
     }
 }
