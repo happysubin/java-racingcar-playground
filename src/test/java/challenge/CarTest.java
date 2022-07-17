@@ -31,4 +31,20 @@ public class CarTest {
         assertThat(moveDistance).isEqualTo(2);
         assertThat(moveDistance2).isEqualTo(2);
     }
+
+    @Test
+    void compareCarPositionTest(){
+        //given
+        Car car1 = new Car("sb");
+        car1.move(9);
+        Car car2 = new Car("sf");
+
+        //when
+        Car car = car1.compareCar(car2);
+
+        //then
+        assertThat(car).isSameAs(car1);
+
+
+    }
 }

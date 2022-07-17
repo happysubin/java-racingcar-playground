@@ -23,4 +23,19 @@ public class Car {
         return moveDistance;
     }
 
+    public Car compareCar(Car comparedCar) {
+        if(comparedCar.isMoreThan(position)){
+            return comparedCar;
+        }
+        return this;
+    }
+
+    public boolean isMoreThan(Position comparedPosition){
+        if(comparedPosition.comparePosition(position) == position ) {
+            return true;
+        }
+        return false;
+    }
+
+
 }
