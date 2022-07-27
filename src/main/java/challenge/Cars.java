@@ -39,11 +39,23 @@ public class Cars {
     }
 
 
-    public Car compareCars() {
+    public Car getFirstRanking() {
         Car car = cars.get(0);
         for (int i = 1; i < cars.size(); i++) {
             car = car.compareCar(cars.get(i));
         }
         return car;
+    }
+
+    public List<Car> getSameFirstRankings(Car firstRanking) {
+        List<Car> list = new ArrayList<>();
+        cars.remove(firstRanking);
+        for (int i = 0; i < cars.size(); i++) {
+            Car car = cars.get(i).compareCar(firstRanking);
+            if(car != firstRanking) {
+                list.add(car);
+            }
+        }
+        return list;
     }
 }
