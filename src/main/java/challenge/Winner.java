@@ -9,10 +9,10 @@ public class Winner {
 
         List<Car> list = cars.getSameFirstRankings(firstRanking);
 
-
-        System.out.println("car.getName().getName() = " + firstRanking.getName().getName());
-        for (Car cars1 : list) {
-            System.out.println(cars1.getName().getName());
+        System.out.print("우승자는 " + firstRanking.getName().getName());
+        for (Car sameFirstRanking : list) {
+            System.out.print(", " + sameFirstRanking.getName().getName());
         }
+        System.out.print(" 입니다.");
     }
 }
