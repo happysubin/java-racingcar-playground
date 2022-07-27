@@ -31,7 +31,7 @@ public class Car {
     }
 
     public boolean isMoreThan(Position comparedPosition){
-        if(comparedPosition.comparePosition(position) == position ) {
+        if(comparedPosition.comparePosition(position) == position ) { //this가 1등 차.
             return true;
         }
         return false;

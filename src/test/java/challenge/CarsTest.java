@@ -51,9 +51,25 @@ public class CarsTest {
         cars.getCars().get(1).move(9);
 
         //when
-        Car car = cars.compareCars();
+        Car car = cars.getFirstRanking();
 
         //then
         assertThat(car).isEqualTo(cars.getCars().get(1));
+    }
+
+    @Test
+    void getSameFirstRankingCarsTest() {
+        //given
+        Cars cars = new Cars(Arrays.asList("a", "b", "c","d"));
+        cars.getCars().get(1).move(9);
+        cars.getCars().get(2).move(9);
+        Car car = cars.getFirstRanking();
+
+        //when
+        List<Car> list = cars.getSameFirstRankings(car);
+
+        //then
+        assertThat(list.get(0)).isEqualTo(cars.getCars().get(1));
+
     }
 }
