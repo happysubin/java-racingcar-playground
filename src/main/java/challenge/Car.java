@@ -7,7 +7,7 @@ public class Car {
 
     public Car(String name) {
         this.name = new Name(name);
-        this.position = new Position();
+        this.position = new Position(StrategyFactory.createStrategy());
     }
 
     public Name getName() {

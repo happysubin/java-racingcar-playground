@@ -2,12 +2,12 @@ package challenge;
 
 public class Position {
 
-    public static final int STANDARD = 4;
-
     private int position;
+    private MoveStrategy moveStrategy;
 
-    public Position() {
+    public Position(MoveStrategy moveStrategy) {
         this.position = 1;
+        this.moveStrategy = moveStrategy;
     }
 
     public int getPosition() {
@@ -15,10 +15,8 @@ public class Position {
     }
 
     public int move(int num) {
-        if(num >= STANDARD ){
-            position++;
-        }
-        return position;
+        this.position = moveStrategy.move(num, position);
+        return this.position;
     }
 
     public Position comparePosition(Position comparativePosition){
